@@ -5,7 +5,7 @@
   grid-template-areas: 
     "img ing"
     "ins ins";
-  margin: 50px;
+  margin: 30px 70px;
 }
 
 .detailImgContainer{

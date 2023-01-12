@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# Project Description:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[APItizers](https://api-tizers.netlify.app/) is a meal recommendation app for those days when you don't know what to eat. 
 
-## Available Scripts
+Users can search by ingredient, or click on one of the many ingredients displayed on the home page, and they will get a list of meal recommendations. From there, they can click on a meal to get the recipe and preparation instructions.
 
-In the project directory, you can run:
+<br>
 
-### `npm start`
+# Screenshots:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Desktop Screenshot:
+![Home Screen](./assets/APItizer_home.png)
+![Meals Recommendations Page](./assets/APItizer_meals.png)
+![Redipe Page](./assets/APItizer_recipe.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+### Mobile Screenshot:
+![Mobile Home Screen](./assets/APItizer_home_mobile.png)
+![Mobile Meals Recommendations Screen](./assets/APItizer_meals_mobile.png)
+![Mobile Recipe Screen](./assets/APItizer_recipe_mobile.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<br>
 
-### `npm run build`
+# Technologies Used
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- React.js
+- Node.js
+- JSX
+- HTML
+- CSS
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<br>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Getting Started/Installation Instructions:
 
-### `npm run eject`
+Using APItizers is easy: simply load the <a href="https://api-tizers.netlify.app/" target="_blank" rel="noopener noreferrer">deployed page</a> and begin your search. 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+To access the code and make contributions:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Fork and clone this repository.
+- Change into the new directory.
+- Install dependencies (npm i or npm install).
+- Open up your app in VS Code (code .)
+- Run npm start to start your local server.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<br>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# Future Features/Improvements:
 
-## Learn More
+- Ability to favorite meals.
+- Combine a second API to display wine pairings for each meal.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<br>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Bugs? Suggestions? Contributions?
 
-### Code Splitting
+Contact us:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Chris Bowman: [chrisb0wman@hotmail.com](mailto:jordan.bortner@gmail.com)
+- John Goodrich: [jbgoodrich26@gmail.com](mailto:Maryrodri3210@gmail.com)
+- Luigi Bustos: [LouisAlphonsoBustos@gmail.com](mailto:LouisAlphonsoBustos@gmail.com)
+- Natalie Perez [natalieperez84@gmail.com](mailto:natalieperez84@gmail.com)
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

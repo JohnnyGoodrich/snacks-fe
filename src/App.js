@@ -7,6 +7,10 @@ import MealList from "./components/MealList.js";
 import MealDetails from "./components/MealDetails.js";
 import RandomMeal from "./components/RandomMeal";
 import NotFound from "./components/NotFound";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHouse, faSearch } from "@fortawesome/free-solid-svg-icons";
+import { Container, Row, Col } from "react-bootstrap";
+import Button from "react-bootstrap/Button";
 
 function App() {
   const [searchBarItem, setSearchBarItem] = useState("");
@@ -31,28 +35,40 @@ function App() {
 
   return (
     <div className="App">
-      <div className="searchBar">
-        <Link to="/">
-          <button>Home</button>
-        </Link>
-        <RandomMeal />
-        <input
-          type="text"
-          id="myInput"
-          value={searchBarItem}
-          onChange={handleItemChange}
-          placeholder="Search.."
-        />
-        <Link to={`/list/${searchBarItem}`}>
-          <button onClick={onClick} className="searchName">
-            {" "}
-            by ingredient{" "}
-          </button>
-        </Link>
-      </div>
+      <Container className="searchBar">
+        <Row className="nav-container">
+          <Col className="nav-btn">
+            <Link to="/">
+              <Button variant="light">
+                <FontAwesomeIcon icon={faHouse} />
+              </Button>
+            </Link>
+            <RandomMeal />
+          </Col>
+          <Col className="nav-search">
+            <input
+              type="text"
+              id="myInput"
+              value={searchBarItem}
+              onChange={handleItemChange}
+              placeholder="Search.."
+            />
+            <Link to={`/list/${searchBarItem}`}>
+              <Button variant="light" onClick={onClick} className="searchName">
+                <FontAwesomeIcon icon={faSearch} />
+              </Button>
+            </Link>
+          </Col>
+        </Row>
+      </Container>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/list/:id" element={ <MealList ingredientName={searchBarItem} isSearch={isSearch} />} />
+        <Route
+          path="/list/:id"
+          element={
+            <MealList ingredientName={searchBarItem} isSearch={isSearch} />
+          }
+        />
         <Route path="/details/:id" element={<MealDetails />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

@@ -63,7 +63,7 @@ const MealList = ({ ingredientName, isSearch }) => {
     <Container>
       <Row>
         <Col>
-          <h1>Meal List Page</h1>
+          <h1>Meal Recommendations</h1>
         </Col>
       </Row>
       <Row>

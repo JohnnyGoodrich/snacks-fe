@@ -7,6 +7,7 @@ import Card from "react-bootstrap/Card";
 
 const Home = () => {
   const [ingredients, setIngredients] = useState(null);
+  const [images, setImages] = useState(null)
 
   async function getIngredients() {
     const url = `https://www.themealdb.com/api/json/v1/1/list.php?i=list`;
@@ -19,9 +20,14 @@ const Home = () => {
       console.error(err);
     }
   }
+
   useEffect(() => {
     getIngredients();
   }, []);
+
+//     addDefaultSrc(e){
+//     e.target.src = 'www.themealdb.com/images/ingredients/Lime.png'
+//   }
 
   const tempStyles = {
     display: "flex",
@@ -34,16 +40,15 @@ const Home = () => {
       <Container style={tempStyles}>
         {ingredients.map((ingredient, index) => {
           return (
-            <Link to={`/list/${ingredient.strIngredient}`}>
-              <Card key={index} style={{ width: "18rem", margin: ".5rem" }}>
+            <Link key={index} to={`/list/${ingredient.strIngredient}`}>
+              <Card style={{ width: "18rem", margin: ".5rem" }}>
                 <Card.Img
                   variant="top"
-                  src={`https://www.themealdb.com/images/ingredients/${ingredient.strIngredient}.png`}
-                  alt="sorry friends no photo for this"
+                  src={`https://www.themealdb.com/images/ingredients/${ingredient.strIngredient}.png`} onError={(e) =>
+                  ((e.target.src ="https://images.emojiterra.com/twitter/v13.1/512px/1f937-2642.png"))}
                 />
                 <Card.Body>
                   <Card.Title>{ingredient.strIngredient}</Card.Title>
-                  {/* <Button variant="primary">View More</Button> */}
                 </Card.Body>
               </Card>
             </Link>

@@ -9,10 +9,15 @@ Users can search by ingredient, or click on one of the many ingredients displaye
 # Screenshots:
 
 ### Desktop Screenshot:
-<img src="https://user-images.githubusercontent.com/115664302/211726692-96dd4adb-62bd-47ff-aac6-a0a7e2c04d85.jpg" alt="FitCheck desktop screenshot" />
+![Home Screen](./assets/APItizer_home.png)
+![Meals Recommendations Page](./assets/APItizer_meals.png)
+![Redipe Page](./assets/APItizer_recipe.png)
+
 
 ### Mobile Screenshot:
-<img src="https://user-images.githubusercontent.com/115664302/211726677-dfffec2a-c8e5-4fd5-9ea6-5f4722c87c03.PNG" alt="FitCheck mobile screenshot" width=50% />
+![Mobile Home Screen](./assets/APItizer_home_mobile.png)
+![Mobile Meals Recommendations Screen](./assets/APItizer_meals_mobile.png)
+![Mobile Recipe Screen](./assets/APItizer_recipe_mobile.png)
 
 <br>
 

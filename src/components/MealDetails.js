@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react';
 import {useParams} from 'react-router';
-import { Link } from "react-router-dom";
+import '../css/MealDetails.css'
 
 function MealDetails(){
     const id = useParams()
@@ -18,10 +18,12 @@ function MealDetails(){
     return (
         mealDetails ?
         <div className="mealDetailContainer">
+            <div className="detailImgContainer">
             <h2>{mealDetails.meals[0].strMeal}</h2>
-            <img src={mealDetails.meals[0].strMealThumb} height="300px"/>
+                <img src={mealDetails.meals[0].strMealThumb} height="300px"/>
+            </div>
 
-            <div className="ingredi">
+            <div className="ingredientsContainer">
                     <p>{mealDetails.meals[0].strMeasure1}  {mealDetails.meals[0].strIngredient1}</p>  
                     <p>{mealDetails.meals[0].strMeasure2} {mealDetails.meals[0].strIngredient2}</p>  
                     <p>{mealDetails.meals[0].strMeasure3} {mealDetails.meals[0].strIngredient3}</p>  
@@ -33,7 +35,7 @@ function MealDetails(){
                     <p>{mealDetails.meals[0].strMeasure9} {mealDetails.meals[0].strIngredient9}</p>  
                     <p>{mealDetails.meals[0].strMeasure10} {mealDetails.meals[0].strIngredient10}</p>  
             </div>
-            <div>
+            <div className="instructionsContainer">
                 <h3>Instructions:</h3>
                 <p>{mealDetails.meals[0].strInstructions}</p>
             </div>

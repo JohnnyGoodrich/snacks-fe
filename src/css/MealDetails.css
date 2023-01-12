@@ -1,11 +1,26 @@
 .mealDetailContainer {
   display: grid;
-  grid-template-columns: repeat(5, 110px);
-  grid-template-rows: repeat(5, 110px);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   grid-template-areas: 
-    "img img img img img"
-    "title title title title title"
-    "glass glass mix mix mix"
-    "ingrD ingrD mix mix mix"
-    "ingrD ingrD mix mix mix";
+    "img ing"
+    "ins ins";
+  margin: 30px;
+}
+
+.detailImgContainer{
+  grid-area: img;
+}
+
+.ingredientsContainer {
+  grid-area: ing;
+}
+
+.instructionsContainer {
+  grid-area: ins;
+}
+
+.detailImgContainer img {
+  margin-top: 10px;
+  border-radius: 12px;
 }

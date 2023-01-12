@@ -5,6 +5,8 @@ import { useState } from "react";
 import Home from "./components/Home.js";
 import MealList from "./components/MealList.js";
 import MealDetails from "./components/MealDetails.js";
+import RandomMeal from "./components/RandomMeal";
+import NotFound from "./components/NotFound";
 
 function App() {
   const [searchBarItem, setSearchBarItem] = useState("");
@@ -33,6 +35,7 @@ function App() {
         <Link to="/">
           <button>Home</button>
         </Link>
+        <RandomMeal />
         <input
           type="text"
           id="myInput"
@@ -49,13 +52,9 @@ function App() {
       </div>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route
-          path="/list/:id"
-          element={
-            <MealList ingredientName={searchBarItem} isSearch={isSearch} />
-          }
-        />
+        <Route path="/list/:id" element={ <MealList ingredientName={searchBarItem} isSearch={isSearch} />} />
         <Route path="/details/:id" element={<MealDetails />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );

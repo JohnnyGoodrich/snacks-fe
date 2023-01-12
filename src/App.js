@@ -2,7 +2,6 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Routes, Route, Link } from "react-router-dom";
 import { useState } from "react";
-import Button from "react-bootstrap/Button";
 import Home from "./components/Home.js";
 import MealList from "./components/MealList.js";
 import MealDetails from "./components/MealDetails.js";

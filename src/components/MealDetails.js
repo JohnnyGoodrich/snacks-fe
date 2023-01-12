@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function MealDetails(){
 
     return (
-        <hi>Meal Details</hi>
+        <hi>dev branch</hi>
       )
       
 }

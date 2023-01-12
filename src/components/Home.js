@@ -1,4 +1,8 @@
 import { useState, useEffect } from "react"
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Card from "react-bootstrap/Card";
 
 
 const Home = () => {
@@ -19,20 +23,47 @@ const Home = () => {
         getIngredients()
     }, [])
 
-    
-    return (
-        ingredients ?
-            <section className="container">
-                {ingredients.map((ingredient, index) => (
-                    <div className="ingredient" key={index}>
-                        <h3>{ingredient.strIngredient}</h3>
-                        <img src={`https://www.themealdb.com/images/ingredients/${ingredient.strIngredient}.png`}/>
-                    </div>
-                ))
-                }
-            </section> : <p> Loading...</p>
-    )
-}
+    const tempStyles = {
+        display: "flex",
+        flexDirection: "row",
+        flexWrap: "wrap",
+      };
 
+      const loaded = () => {
+        return (
+          <Container style={tempStyles}>
+            {ingredients.map((ingredient, index) => {
+              return (
+                <Card key={index} style={{ width: "18rem", margin: ".5rem" }}>
+                  <Card.Img variant="top" src={`https://www.themealdb.com/images/ingredients/${ingredient.strIngredient}.png`} />
+                  <Card.Body>
+                    <Card.Title>{ingredient.strIngredient}</Card.Title>
+                    {/* <Button variant="primary">View More</Button> */}
+                  </Card.Body>
+                </Card>
+              );
+            })}
+          </Container>
+
+        );
+      };
+
+      const loading = () => {
+    return <p>Loading Ingredients...</p>;
+  };
+
+  return (
+    <Container>
+      <Row>
+        <Col>
+          <h3>Search by ingredient above, or choose an ingredient below:</h3>
+        </Col>
+      </Row>
+      <Row>
+        <Col>{ingredients ? loaded() : loading()}</Col>
+      </Row>
+    </Container>
+  );
+};
 
 export default Home

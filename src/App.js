@@ -49,7 +49,6 @@ function App() {
               <button onClick={onClick} className='searchName' > by ingredient </button>
             </Link>
       </div>
-      <h1>hi</h1>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/list/:id" element={<MealList  drinkName={searchBarItem} isSearch={isSearch} /> } />

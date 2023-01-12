@@ -23,7 +23,7 @@ const RandomMeal = () =>
 // Fetches API and stores it as json in state at page load.
   useEffect(() => 
   {
-      const url = `www.themealdb.com/api/json/v1/1/random.php`;
+      const url = `https://www.themealdb.com/api/json/v1/1/random.php`;
       fetch(url)
       .then((response) => response.json())
       .then((json) => 
@@ -40,7 +40,8 @@ const RandomMeal = () =>
         {
           return (
             <div className='random' key={randomMealIdx}>
-              <Link to={`/mealDetails/${randomMealMap.idMeal}`} onClick={refreshPageFunction} >
+              <Link to={`/details/${randomMealMap.idMeal}`} onClick={refreshPageFunction} >
+                <img height={48} src='https://imgur.com/Qhx44CE.png' />
                 <p>Random</p>
               </Link>
             </div>

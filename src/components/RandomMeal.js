@@ -41,7 +41,7 @@ const RandomMeal = () =>
           return (
             <div className='random' key={randomMealIdx}>
               <Link to={`/details/${randomMealMap.idMeal}`} onClick={refreshPageFunction} >
-                <img height={48} src='https://imgur.com/Qhx44CE.png' />
+                <img height={48} src='https://imgur.com/dw6RNlD.png' />
                 <p>Random</p>
               </Link>
             </div>

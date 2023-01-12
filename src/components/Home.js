@@ -39,6 +39,7 @@ const Home = () => {
                 <Card.Img
                   variant="top"
                   src={`https://www.themealdb.com/images/ingredients/${ingredient.strIngredient}.png`}
+                  alt="sorry friends no photo for this"
                 />
                 <Card.Body>
                   <Card.Title>{ingredient.strIngredient}</Card.Title>

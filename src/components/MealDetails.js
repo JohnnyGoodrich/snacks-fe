@@ -19,6 +19,8 @@ function MealDetails(){
         mealDetails ?
         <div>
             <h2>{mealDetails.meals[0].strMeal}</h2>
+            <img src={mealDetails.meals[0].strMealThumb} height="300px"/>
+
             <div>
                     <p>{mealDetails.meals[0].strMeasure1}  {mealDetails.meals[0].strIngredient1}</p>  
                     <p>{mealDetails.meals[0].strMeasure2} {mealDetails.meals[0].strIngredient2}</p>  

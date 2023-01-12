@@ -24,6 +24,7 @@ function MealDetails(){
             </div>
 
             <div className="ingredientsContainer">
+                    <h2>Ingredients</h2>
                     <p>{mealDetails.meals[0].strMeasure1}  {mealDetails.meals[0].strIngredient1}</p>  
                     <p>{mealDetails.meals[0].strMeasure2} {mealDetails.meals[0].strIngredient2}</p>  
                     <p>{mealDetails.meals[0].strMeasure3} {mealDetails.meals[0].strIngredient3}</p>  
@@ -36,7 +37,7 @@ function MealDetails(){
                     <p>{mealDetails.meals[0].strMeasure10} {mealDetails.meals[0].strIngredient10}</p>  
             </div>
             <div className="instructionsContainer">
-                <h3>Instructions:</h3>
+                <h2>Instructions</h2>
                 <p>{mealDetails.meals[0].strInstructions}</p>
             </div>
         </div> : <p>Loading...</p>

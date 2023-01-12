@@ -5,7 +5,9 @@ import { Link } from "react-router-dom";
 function MealDetails(){
 
     return (
+
         <hi>John Goodrich</hi>
+
       )
       
 }

@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import Container from "react-bootstrap/Container";
-import Button from "react-bootstrap/Button";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+// import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 
 const MealList = () => {
@@ -32,11 +34,11 @@ const MealList = () => {
       <Container style={tempStyles}>
         {data.map((meal, idx) => {
           return (
-            <Card key={idx} style={{ width: "18rem" }}>
+            <Card key={idx} style={{ width: "18rem", margin: ".5rem" }}>
               <Card.Img variant="top" src={meal.strMealThumb} />
               <Card.Body>
                 <Card.Title>{meal.strMeal}</Card.Title>
-                <Button variant="primary">Go somewhere</Button>
+                {/* <Button variant="primary">View More</Button> */}
               </Card.Body>
             </Card>
           );
@@ -50,10 +52,16 @@ const MealList = () => {
   };
 
   return (
-    <div>
-      <h1>Meal List Page</h1>
-      {data ? loaded() : loading()}
-    </div>
+    <Container>
+      <Row>
+        <Col>
+          <h1>Meal List Page</h1>
+        </Col>
+      </Row>
+      <Row>
+        <Col>{data ? loaded() : loading()}</Col>
+      </Row>
+    </Container>
   );
 };
 

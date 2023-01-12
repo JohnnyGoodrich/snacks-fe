@@ -36,3 +36,96 @@
     transform: rotate(360deg);
   }
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap');
+
+:root {
+  --primary: #436E99;
+  --secondary: #F5F5F4;
+  --text: #252A38;
+  --accent: #b19273;
+  --grey: #B7BAB9;
+}
+
+* {
+  font-family: 'Work Sans', sans-serif;
+}
+
+.App {
+  background-color: var(--secondary);
+}
+
+.searchBar {
+  width: 100%;
+  padding: .5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: var(--primary);
+  border-radius: 0 0 12px 12px;
+  position: sticky;
+}
+
+.nav-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.nav-btn button {
+  margin-left: .5rem;
+}
+
+.nav-search {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.nav-search button {
+  margin-left: .5rem;
+}
+
+.nav-search input {
+  border-radius: 8px;
+  height: 2.3rem
+}
+
+a .card {
+  border: 2px solid var(--text);
+  border-radius: 8px;
+}
+
+.card-body {
+  background-color: var(--accent);
+  border-radius: 0 0 8px 8px;
+}
+
+.card-title {
+  color: var(--text);
+}
+
+a {
+  text-decoration: none !important;
+  color: var(--text);
+}
+
+.apiHighlight {
+  color: var(--accent)
+}
+
+.titleMargin{
+  margin-top: 16px;
+}
+
+.stickMargin{
+
+}

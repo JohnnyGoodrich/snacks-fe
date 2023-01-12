@@ -49,6 +49,7 @@ const RandomMeal = () => {
           </div>
         );
       })}
+
     </>
   ) : (
     <p> </p>

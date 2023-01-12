@@ -52,10 +52,8 @@ function App() {
       <h1>hi</h1>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/list" element={<MealList />} />
-        <Route path="/details" element={<MealDetails  drinkName={searchBarItem} isSearch={isSearch} /> } />
-        <Route path="/details/:id" />
-
+        <Route path="/list/:id" element={<MealList  drinkName={searchBarItem} isSearch={isSearch} /> } />
+        <Route path="/details/:id" element={<MealDetails />} />
       </Routes>
     </div>
   );

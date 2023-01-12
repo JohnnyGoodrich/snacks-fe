@@ -34,6 +34,7 @@ const MealList = ({ ingredientName, isSearch }) => {
     display: "flex",
     flexDirection: "row",
     flexWrap: "wrap",
+    justifyContent: "center",
   };
 
   const loaded = () => {

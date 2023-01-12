@@ -30,6 +30,9 @@ function App() {
   return (
     <div className="App">
       <div className="searchBar">
+        <Link to="/">
+          <button>Home</button>
+        </Link>
         <input
           type="text"
           id="myInput"

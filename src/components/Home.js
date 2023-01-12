@@ -31,11 +31,11 @@ const Home = () => {
 
   const loaded = () => {
     return (
-      <Container style={tempStyles}>
+      <Container style={tempStyles} >
         {ingredients.map((ingredient, index) => {
           return (
-            <Link to={`/list/${ingredient.strIngredient}`}>
-              <Card key={index} style={{ width: "18rem", margin: ".5rem" }}>
+            <Link to={`/list/${ingredient.strIngredient}`} key={index}>
+              <Card style={{ width: "18rem", margin: ".5rem" }}>
                 <Card.Img
                   variant="top"
                   src={`https://www.themealdb.com/images/ingredients/${ingredient.strIngredient}.png`}

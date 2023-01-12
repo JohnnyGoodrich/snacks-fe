@@ -17,11 +17,11 @@ function MealDetails(){
     }, [])
     return (
         mealDetails ?
-        <div>
+        <div className="mealDetailContainer">
             <h2>{mealDetails.meals[0].strMeal}</h2>
             <img src={mealDetails.meals[0].strMealThumb} height="300px"/>
 
-            <div>
+            <div className="ingredi">
                     <p>{mealDetails.meals[0].strMeasure1}  {mealDetails.meals[0].strIngredient1}</p>  
                     <p>{mealDetails.meals[0].strMeasure2} {mealDetails.meals[0].strIngredient2}</p>  
                     <p>{mealDetails.meals[0].strMeasure3} {mealDetails.meals[0].strIngredient3}</p>  

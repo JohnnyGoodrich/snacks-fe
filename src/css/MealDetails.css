@@ -1,0 +1,11 @@
+.mealDetailContainer {
+  display: grid;
+  grid-template-columns: repeat(5, 110px);
+  grid-template-rows: repeat(5, 110px);
+  grid-template-areas: 
+    "img img img img img"
+    "title title title title title"
+    "glass glass mix mix mix"
+    "ingrD ingrD mix mix mix"
+    "ingrD ingrD mix mix mix";
+}

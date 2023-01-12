@@ -37,7 +37,7 @@ const Home = () => {
 
   const loaded = () => {
     return (
-      <Container style={tempStyles}>
+      <Container style={tempStyles} >
         {ingredients.map((ingredient, index) => {
           return (
             <Link key={index} to={`/list/${ingredient.strIngredient}`}>

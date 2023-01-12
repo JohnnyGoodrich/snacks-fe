@@ -1,0 +1,26 @@
+.mealDetailContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: 
+    "img ing"
+    "ins ins";
+  margin: 30px;
+}
+
+.detailImgContainer{
+  grid-area: img;
+}
+
+.ingredientsContainer {
+  grid-area: ing;
+}
+
+.instructionsContainer {
+  grid-area: ins;
+}
+
+.detailImgContainer img {
+  margin-top: 10px;
+  border-radius: 12px;
+}

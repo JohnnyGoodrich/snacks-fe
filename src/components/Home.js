@@ -66,7 +66,7 @@ const Home = () => {
     <Container>
       <Row>
         <Col>
-          <h3>Search by ingredient above, or choose an ingredient below:</h3>
+          <h3 className="titleMargin">Search by ingredient above, or choose an ingredient below:</h3>
         </Col>
       </Row>
       <Row>

@@ -35,7 +35,9 @@ const RandomMeal = () => {
     <>
       {randomMeal.meals.map((randomMealMap, randomMealIdx) => {
         return (
-          <div className="random" key={randomMealIdx}>
+          <div key={randomMealIdx}>
+
+          <div className="random">
             <Link
               to={`/details/${randomMealMap.idMeal}`}
               onClick={refreshPageFunction}
@@ -46,6 +48,8 @@ const RandomMeal = () => {
                 <FontAwesomeIcon icon={faRandom} />
               </Button>
             </Link>
+          </div>
+
           </div>
         );
       })}

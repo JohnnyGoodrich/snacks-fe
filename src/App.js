@@ -33,6 +33,8 @@ function App() {
     }
   };
 
+   
+  // <Container className="searchBar fixed-top"></Container>
   return (
     <div className="App">
       <Container className="searchBar">
@@ -44,6 +46,9 @@ function App() {
               </Button>
             </Link>
             <RandomMeal />
+          </Col>
+          <Col>
+          <h1><span className='apiHighlight'>API</span>TIZERS</h1>
           </Col>
           <Col className="nav-search">
             <input

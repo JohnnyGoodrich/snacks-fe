@@ -37,7 +37,7 @@ function App() {
           onChange={handleItemChange}
           placeholder="Search.."
         />
-        <Link to={`/drinks-details/${searchBarItem}`}>
+        <Link to={`/list/${searchBarItem}`}>
           <button onClick={onClick} className="searchName">
             {" "}
             by ingredient{" "}
@@ -47,8 +47,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route
-          path="/list/"
-          element={<MealList drinkName={searchBarItem} isSearch={isSearch} />}
+          path="/list/:id"
+          element={
+            <MealList ingredientName={searchBarItem} isSearch={isSearch} />
+          }
         />
         <Route path="/details/:id" element={<MealDetails />} />
       </Routes>

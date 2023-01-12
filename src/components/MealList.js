@@ -1,17 +1,24 @@
 import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 
-const MealList = () => {
+const MealList = ({ ingredientName, isSearch }) => {
   const [data, setData] = useState([]);
-  const URL =
+
+  // URL for Search Bar
+  const searchURL = `https://www.themealdb.com/api/json/v1/1/filter.php?i=${ingredientName}`;
+
+  // URL for HomePage
+  // const homeURL = `https://www.themealdb.com/api/json/v1/1/filter.php?i=${id}`;
+  const homeURL =
     "https://www.themealdb.com/api/json/v1/1/filter.php?i=chicken_breast";
   const getMealListData = async () => {
     try {
-      const response = await fetch(URL);
+      const response = await fetch(isSearch ? searchURL : homeURL);
       const data = await response.json();
       console.log(data.meals);
       setData(data.meals);
@@ -21,7 +28,7 @@ const MealList = () => {
   };
   useEffect(() => {
     getMealListData();
-  }, []);
+  }, [isSearch]);
 
   const tempStyles = {
     display: "flex",

@@ -8,14 +8,14 @@ import Card from "react-bootstrap/Card";
 
 const MealList = ({ ingredientName, isSearch }) => {
   const [data, setData] = useState([]);
-
+  const { id } = useParams();
   // URL for Search Bar
   const searchURL = `https://www.themealdb.com/api/json/v1/1/filter.php?i=${ingredientName}`;
 
   // URL for HomePage
   // const homeURL = `https://www.themealdb.com/api/json/v1/1/filter.php?i=${id}`;
-  const homeURL =
-    "https://www.themealdb.com/api/json/v1/1/filter.php?i=chicken_breast";
+  const homeURL = `https://www.themealdb.com/api/json/v1/1/filter.php?i=${id}`;
+
   const getMealListData = async () => {
     try {
       const response = await fetch(isSearch ? searchURL : homeURL);

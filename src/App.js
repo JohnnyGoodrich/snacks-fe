@@ -54,6 +54,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/list" element={<MealList />} />
         <Route path="/details" element={<MealDetails  drinkName={searchBarItem} isSearch={isSearch} /> } />
+        <Route path="/details/:id" />
+
       </Routes>
     </div>
   );
